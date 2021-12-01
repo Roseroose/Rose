@@ -1,56 +1,63 @@
 import java.util.Scanner;
 
 public class rockpaperscissors {
-    public static void main(String[] args){
-        System.out. println("Choose rock paper or scissors. 'r' for rock, 'p' for paper and 's' for scissors. To exit choose 'x'.");
-        int wins=0;
-        int losses=0;
-        while(true) {
+    public static void main(String[] args) {
+            System.out. println("Choose rock paper ors scissors. 'r' for rock, 'p' for paper and 's' for scissors. To exit choose 'x'.");
+            int wins=0;
+            int losses=0;
+            int ties=0;
+            int i=0;
+            while(i<15) {
 
-
-
-            Scanner input = new Scanner(System.in);
-            String myMove =input.nextLine();
-            if(myMove.equals("x")) {
-                break;
-            }
-
-            if(!myMove.equals("r") && !myMove.equals("p") && !myMove.equals("s")) {
-                System.out.println("Your move isn't valid!");
-            } else {
-                int rand = (int)(Math.random()*3);
-                String opponentMove = "";
-                if(rand == 0) {
-                    opponentMove = "r";
-                } else if(rand == 1) {
-                    opponentMove = "p";
-                } else {
-                    opponentMove = "s";
+                Scanner input = new Scanner(System.in);
+                String myMove =input.nextLine();
+                if(myMove.equals("x")) {
+                    break;
                 }
 
-                System.out.println("Opponent move: " + opponentMove);
-
-                if(myMove.equals(opponentMove)) {
-                    System.out.println("It's a tie!");
-                } else if((myMove.equals("r") && opponentMove.equals("s")) || (myMove.equals("s") && opponentMove.equals("p")) || (myMove.equals("p") && opponentMove.equals("r"))) {
-                    System.out.println("You won!");
-                    wins++;
-
+                if(!myMove.equals("r") && !myMove.equals("p") && !myMove.equals("s")) {
+                    System.out.println("Your move isn't valid!");
                 } else {
-                    System.out.println("You lost!");
-                    losses++;
+                    int rand = (int)(Math.random()*3);
+                    String opponentMove = "";
+                    if(rand == 0) {
+                        opponentMove = "r";
+                    } else if(rand == 1) {
+                        opponentMove = "p";
+                    } else {
+                        opponentMove = "s";
+                    }
 
+                    System.out.println("Opponent move: " + opponentMove);
+
+                    if(myMove.equals(opponentMove)) {
+                        System.out.println("It's a tie!");
+                        ties++;
+                        i++;
+                    } else if((myMove.equals("r") && opponentMove.equals("s")) || (myMove.equals("s") && opponentMove.equals("p")) || (myMove.equals("p") && opponentMove.equals("r"))) {
+                        System.out.println("You won!");
+                        wins++;
+                        i++;
+
+                    } else {
+                        System.out.println("You lost!");
+                        losses++;
+                        i++;
+
+                    }
+                    System.out.println("Wins: "+wins);
+                    System.out.println("Loses: "+losses);
+                    System.out.println("Ties: "+ties);
+                    System.out.print(System.lineSeparator());
                 }
-                System.out.println("Wins: "+wins);
-                System.out.println("Loses: "+losses);
-                System.out.print(System.lineSeparator());
+
             }
 
-        }
 
+            System.out.println("Thanks for playing Rock, Paper, Scissors!");
 
-        System.out.println("Thanks for playing Rock, Paper, Scissors!");
 
     }
 }
+
 
