@@ -13,7 +13,7 @@ public class Main {
                 case 'u':
                     answer++;
                     break;
-            }zz
+            }
         }
 
         return answer;
