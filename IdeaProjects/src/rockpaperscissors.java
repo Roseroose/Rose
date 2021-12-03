@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class rockpaperscissors {
     public static void main(String[] args) {
-            System.out. println("Choose rock paper ors scissors. 'r' for rock, 'p' for paper and 's' for scissors. To exit choose 'x'.");
+            System.out. println("Choose rock paper or scissors. 'r' for rock, 'p' for paper and 's' for scissors. To exit choose 'x'.");
             int wins=0;
             int losses=0;
             int ties=0;
