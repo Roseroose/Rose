@@ -5,7 +5,6 @@ public class Main {
         School school = new School("Uhill", "Vancouver", "Canada");
 
         school.addStudent(new Student(234,2,"B","B"));
-        school.addStudent(new Student(345,3,"c","c"));
         school.addStudent(new Student(456, 4,"D","D"));
         school.addStudent(new Student(567,5,"E","E"));
         school.addStudent(new Student(789,6,"F","F"));
